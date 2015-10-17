@@ -6,7 +6,6 @@ var Fuzzer = function(ctx){
 	this.width = ctx.canvas.width;
 	this.height = ctx.canvas.height;
 	this.lastDrawTime = 0;
-	this.setText(moby);
 	return this;
 }
 
@@ -94,7 +93,7 @@ var Experiment = function(canvas){
 	this.context.textAlign = "center";
 	window.results = {0:[], 7:[], 15:[], 30:[]};
 	this.fuzzer = new Fuzzer(this.context);
-	this.fuzzer.setText(moby);
+	this.fuzzer.setText(text);
 	this.explainer = new Explainer(this.context);
 	this.explainer.setText("Click to be presented with text.\nClick again when you know what is said");
 	this.isExplainer = true;
